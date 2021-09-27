@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltp | head
+find . -type f exec ls -c {} | head 
