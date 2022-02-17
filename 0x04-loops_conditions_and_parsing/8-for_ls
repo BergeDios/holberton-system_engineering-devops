@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# script displays content of current directory in list format with only name
+for i in *
+do
+	echo $i | cut -f 2- -d '-'
+done
