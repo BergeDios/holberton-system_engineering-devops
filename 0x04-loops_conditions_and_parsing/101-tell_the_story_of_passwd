@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# display etc paswwd parsed
 FILENAME="/etc/passwd"
 while IFS=: read -r username password userid groupid comment homedir cmdshell
 do
