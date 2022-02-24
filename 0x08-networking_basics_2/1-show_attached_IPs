@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script displaying all active ip4s
+/sbin/ifconfig -a | grep inet | cut -d ' ' -f 10
