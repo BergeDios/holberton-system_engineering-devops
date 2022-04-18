@@ -1,3 +1,5 @@
+# create a file using puppet that conatins a  string
+
 file { '/tmp/school':
   ensure  => 'file',
   content => 'I love Puppet',
