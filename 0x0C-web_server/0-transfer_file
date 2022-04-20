@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# bash script that tranfers file from client to server
+if [ $# -le 0]
+then
+  
