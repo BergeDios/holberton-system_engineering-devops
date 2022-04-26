@@ -1,3 +1,5 @@
+# script installing nginx and adding header
+
 exec { 'apt-get update':
   provider => shell,
   command  => 'sudo apt-get -y update',
