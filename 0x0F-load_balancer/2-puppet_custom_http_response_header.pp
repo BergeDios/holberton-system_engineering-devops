@@ -11,9 +11,10 @@ exec { 'sudo apt-get install -y nginx':
 }
 
 exec { 'add_header':
-  provider => shell,
-  command  => "sudo sed -i '/^\tinclude /etc/nginx/sites-enabled/*;/a \n\tadd_header X-Served-By ${HOSTNAME};' /etc/nginx/nginx.conf",
-  before   => Exec['service nginx restart'],
+  provider   => shell,
+  enviroment => ["HOST=${hostname}"],
+  command    => "sudo sed -i '/^\tinclude /etc/nginx/sites-enabled/*;/a \n\tadd_header X-Served-By ${HOST};' /etc/nginx/nginx.conf",
+  before     => Exec['service nginx restart'],
 }
 
 exec { 'service nginx restart':
