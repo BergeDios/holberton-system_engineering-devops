@@ -26,4 +26,4 @@ if __name__ == "__main__":
     print(f"Employee {json_user['name']} is done with tasks({n_c}/{n_t}):")
     for task in json_todo:
         if task['completed'] is True:
-            print(f"\t {task['title']}".expandtabs(4))
+            print(f"\t {task['title']}")
