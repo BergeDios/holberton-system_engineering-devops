@@ -16,18 +16,6 @@ if __name__ == "__main__":
     todos_resp = requests.get(todos)
     json_todo = todos_resp.json()
 
-    # Counting number of tasks total and completed
-    n_t = 0
-    n_c = 0
-    for task in json_todo:
-        n_t += 1
-        if task['completed'] is True:
-            n_c += 1
-    # Printing as nedeed name of employer num of tasks anf tasks
-    print(f"Employee {json_user['name']} is done with tasks({n_c}/{n_t}:)")
-    for task in json_todo:
-        if task['completed'] is True:
-            print(f"\t {task['title']}".expandtabs(4))
     # saving to csv format file info of employee
     filename = f'{argv[1]}.csv'
     csv_list = []
