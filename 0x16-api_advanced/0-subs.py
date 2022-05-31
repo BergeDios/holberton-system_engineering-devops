@@ -5,7 +5,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """ Function receives subreddit to look for as parameter"""
-    url = f'https://www.reddit.com/r/{subreddit}/about.json'
+    url = f'http://reddit.com/r/{subreddit}/about.json'
 
     user_agent = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
                   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 '
