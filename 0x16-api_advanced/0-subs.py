@@ -1,4 +1,4 @@
-#!/user/bin/python3
+#!/usr/bin/python3
 """ Script defines func that gets info of subreddit, returns amount of subs"""
 import requests
 
