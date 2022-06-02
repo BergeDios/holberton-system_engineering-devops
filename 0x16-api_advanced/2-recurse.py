@@ -26,6 +26,7 @@ def recurse(subreddit, hot_list=[], after=None):
             hot_list.append(post['data']['title'])
         after = json_res['data'].get('after')
         if not after:
+            print(len(hot_list))
             return hot_list
         else:
-            recurse(subreddit, hot_list=hot_list, after=after)
+             return recurse(subreddit, hot_list=hot_list, after=after)
